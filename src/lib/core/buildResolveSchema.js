@@ -65,9 +65,9 @@ const buildResolveSchema = ({
 
       let fixed;
       if (typeof ref !== 'undefined') {
-        if (!ref && optionAPI('ignoreMissingRefs') !== true) {
-          throw new Error(`Reference not found: ${sub.$ref}`);
-        }
+        // if (!ref && optionAPI('ignoreMissingRefs') !== true) {
+        //   throw new Error(`Reference not found: ${sub.$ref}`);
+        // }
 
         seenRefs[sub.$ref] -= 1;
         utils.merge(sub, ref || {});

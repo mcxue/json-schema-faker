@@ -21,7 +21,8 @@ function getLocalRef(obj, path, refs) {
     const prop = keyElements.shift();
 
     if (!schema[prop]) {
-      throw new Error(`Prop not found: ${prop} (${path})`);
+      return;
+      // throw new Error(`Prop not found: ${prop} (${path})`);
     }
 
     schema = schema[prop];
